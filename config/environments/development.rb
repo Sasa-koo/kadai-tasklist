@@ -28,6 +28,7 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
+    config.hosts.clear
   end
 
   # Don't care if the mailer can't send.
@@ -70,4 +71,5 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  config.hosts.clear
 end
