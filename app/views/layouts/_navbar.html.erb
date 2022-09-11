@@ -11,9 +11,6 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <% if logged_in? %>
           <div class="btn-group">
-            <ul class="navbar-nav">
-              <li class="ms-3"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
-            </ul>
             <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><%= current_user.name %></button>
             <ul class="dropdown-menu dropdown-menu-end">
               <li class="dropdown-item"><%= link_to '新規タスクの投稿', new_task_path, class: 'nav-link' %></li>
