@@ -1,6 +1,6 @@
 <h1>タスク一覧</h1>
 
-<% if @tasks.any? %>
+<% if tasks.any? %>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <ul class="list-unstyled mt-2">
-      <% @tasks.each do |task| %>
+      <% tasks.each do |task| %>
         <tr>
           <td><%= link_to task.id, task %></td>
           <td><%= task.status %></td>
