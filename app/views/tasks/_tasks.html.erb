@@ -12,13 +12,13 @@
     <tbody>
       <ul class="list-unstyled mt-2">
       <% tasks.each do |task| %>
-        <% if current_user == task.user %>
+        
           <tr>
             <td><%= link_to task.id, task %></td>
             <td><%= task.status %></td>
             <td><%= task.content %></td>
           </tr>
-        <% end %>
+
       <% end %>
     </tbody>
   </table>

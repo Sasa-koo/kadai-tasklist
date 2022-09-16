@@ -4,7 +4,9 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   
   def index
-    @pagy, @tasks = pagy(Task.order(id: :desc), items:3)
+    if logged_in?
+      @pagy, @tasks = pagy(current_user.tasks.order(id: :desc), items:3)
+    end
   end
 
   def show
