@@ -25,7 +25,7 @@ class TasksController < ApplicationController
     else
       @pagy, @tasks = pagy(current_user.tasks.order(id: :desc))
       flash.now[:danger] = 'タスクが投稿されませんでした'
-      render 'tasks/index'
+      render 'tasks/new'
     end
   end
 
